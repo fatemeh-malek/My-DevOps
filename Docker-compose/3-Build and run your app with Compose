@@ -1,0 +1,23 @@
+#With a single command, you create and start all the services from your configuration file.
+#From your project directory, start up your application by running docker compose up.
+docker compose up
+#Compose pulls a Redis image, builds an image for your code, and starts the services you defined.
+#In this case, the code is statically copied into the image at build time.
+#Enter http://localhost:8000/ in a browser to see the application running.
+#If this doesn't resolve, you can also try http://127.0.0.1:8000.
+#You should see a message in your browser saying:
+#Hello World! I have been seen 1 times.
+#Refresh the page.
+
+#The number should increment.
+#Hello World! I have been seen 2 times.
+#Switch to another terminal window, and type docker image ls to list local images.
+
+#Listing images at this point should return redis and web.
+ docker image ls
+#You can inspect images with docker inspect <tag or id>.
+#Stop the application, by:
+docker compose down from within your project directory in the second terminal
+#OR by hitting 
+CTRL+C in the original terminal where you started the app.
+
